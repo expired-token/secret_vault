@@ -34,6 +34,9 @@ go.work.sum
 # Local .terraform directories
 .terraform/
 
+# Code on zip file 
+terraform/*.zip
+
 # .tfstate files
 *.tfstate
 *.tfstate.*
