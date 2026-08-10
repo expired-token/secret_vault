@@ -22,7 +22,7 @@ jobs:
           aws-region: eu-north-1
 
       - name: Run Code Script
-        run: bash ./bashsc/package.sh
+        run: bash ./bashsc/package
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
