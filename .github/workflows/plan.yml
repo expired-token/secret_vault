@@ -39,8 +39,8 @@ jobs:
 
       - name: Terraform Plan
         working-directory: terraform
-        run: terraform plan -out=tfplan -no-color > plan.txt 2>&1
-        continue-on-error: true
+        run: terraform plan # -out=tfplan -no-color 2>&1 | tee plan.txt
+        # continue-on-error: true
 
       - name: Comment Plan on PR
         uses: actions/github-script@v6
