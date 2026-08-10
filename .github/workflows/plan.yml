@@ -29,13 +29,16 @@ jobs:
         uses: hashicorp/setup-terraform@v3
 
       - name: Terraform Init
+        working-directory: terraform
         run: terraform init
 
       - name: Terraform Format
+        working-directory: terraform
         run: terraform fmt -check
         continue-on-error: true
 
       - name: Terraform Plan
+        working-directory: terraform
         run: terraform plan -out=tfplan -no-color > plan.txt 2>&1
         continue-on-error: true
 
