@@ -20,7 +20,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
-          region: eu-north-1 # in GitHub Secrets
+          aws-region: eu-north-1
 
       - name: Run Bash Script
         run: bash ./bashsc/package
