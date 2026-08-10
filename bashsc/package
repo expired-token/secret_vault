@@ -1,4 +1,6 @@
 #!/bin/bash
+cd bashsc
 GOOS=linux GOARCH=arm64 go build -o bootstrap ../main.go
+rm -f -- ../terraform/test_code.zip
 zip ../terraform/test_code.zip bootstrap
 rm bootstrap
